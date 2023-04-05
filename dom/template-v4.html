@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <p>{{ tituto }}</p>
+  <p>{{ saudacao() }}</p>
+  <a :href="link">Google</a> 
+  <!--directivas  
+  Is uma propriedade personalizada que sao personalidades pelo vue
+  *! podemos criar as nossas proprias propriedades personalizadas  
+  * que o html ainda nao entende. (Nota importante)
+  -->
+</div> 
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      tituto: 'Usando vueJs', 
+      link: 'http://google.com.br'
+    }, 
+    methods: {
+      saudacao() {
+        console.log(this)
+        return this.tituto
+      }
+    }
+  })
+</script> 

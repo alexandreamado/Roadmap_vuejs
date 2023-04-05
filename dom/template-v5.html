@@ -1,0 +1,23 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <p v-once>{{ tituto }}</p>
+  <p>{{ saudacao() }}</p>
+  <a v-bind:href="link">Google</a> 
+</div> 
+
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      tituto: 'Usando vueJs', 
+      link: 'http://google.com.br'
+    }, 
+    methods: {
+      saudacao() {
+        this.tituto = "Bom dia!!"
+        return this.tituto
+      }
+    }
+  })
+</script> 

@@ -1,0 +1,15 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+
+<div id="app">
+    <p>{{ tituto }}</p>
+    <input type="text" v-model="tituto">
+  </div> 
+  
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        tituto: 'Usando VueJs'
+      }
+    })
+  </script> 
