@@ -1,0 +1,29 @@
+<meta charset="utf-8" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <input type="text" v-model="message" />
+  <button @click="saveMessage">Salvar mensagem</button>
+</div>
+
+<script>
+  new Vue({
+    el: "#app",
+    data() {
+      return {
+        message: "",
+      };
+    },
+    methods: {
+      saveMessage() {
+        localStorage.setItem("message", this.message);
+        alert("Mensagem salva com sucesso!");
+      },
+    },
+    mounted() {
+      if (localStorage.getItem("message")) {
+        this.message = localStorage.getItem("message");
+      }
+    },
+  });
+</script>
